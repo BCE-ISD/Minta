@@ -66,5 +66,10 @@ namespace MintaZh1
                          select r.Year).Distinct();
             cboxYears.DataSource = years.ToList();
         }
+
+        private int CalculatePosition(OlympicResult or)
+        {
+            return 0;
+        }
     }
 }
