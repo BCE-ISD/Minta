@@ -18,6 +18,11 @@ namespace MintaZh1
         public Form1()
         {
             InitializeComponent();
+            LoadData("Summer_olympic_Medals.csv");
+        }
+
+        private void LoadData(string fileName)
+        { 
         }
     }
 }
