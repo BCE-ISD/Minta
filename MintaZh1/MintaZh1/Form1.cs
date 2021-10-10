@@ -64,6 +64,7 @@ namespace MintaZh1
             var years = (from r in results
                          orderby r.Year
                          select r.Year).Distinct();
+            cboxYears.DataSource = years.ToList();
         }
     }
 }
