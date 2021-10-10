@@ -141,6 +141,11 @@ namespace MintaZh1
             };
             for (int i = 0; i < headers.Length; i++)
                 xlSheet.Cells[1, i + 1] = headers[i];
+
+            var filteredResults = from r in results
+                                  where r.Year == (int)cboxYears.SelectedItem
+                                  orderby r.Position
+                                  select r;
         }
     }
 }
