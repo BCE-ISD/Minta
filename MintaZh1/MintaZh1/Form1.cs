@@ -20,6 +20,7 @@ namespace MintaZh1
         {
             InitializeComponent();
             LoadData("Summer_olympic_Medals.csv");
+            CreateYearFilter();
         }
 
         private void LoadData(string fileName)
@@ -56,6 +57,10 @@ namespace MintaZh1
                     results.Add(or);
                 }
             }
+        }
+
+        private void CreateYearFilter()
+        { 
         }
     }
 }
