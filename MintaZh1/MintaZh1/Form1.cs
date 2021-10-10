@@ -91,7 +91,7 @@ namespace MintaZh1
                 //        if (r.Medals[2] > or.Medals[2])
                 //            betterCountryCount++;
             }
-            return 0;
+            return betterCountryCount + 1;
         }
     }
 }
