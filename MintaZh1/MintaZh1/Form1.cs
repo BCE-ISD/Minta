@@ -131,6 +131,16 @@ namespace MintaZh1
 
         private void CreateExcel()
         {
+            var headers = new string[]
+            {
+                "Helyezés",
+                "Ország",
+                "Arany",
+                "Ezüst",
+                "Bronz"
+            };
+            for (int i = 0; i < headers.Length; i++)
+                xlSheet.Cells[1, i + 1] = headers[i];
         }
     }
 }
