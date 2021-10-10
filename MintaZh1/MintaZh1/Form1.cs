@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MintaZh1.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace MintaZh1
 {
     public partial class Form1 : Form
     {
+        List<OlympicResult> results = new List<OlympicResult>();
+
         public Form1()
         {
             InitializeComponent();
