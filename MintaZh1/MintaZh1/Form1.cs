@@ -73,6 +73,24 @@ namespace MintaZh1
             var filteredResults = from r in results
                                   where r.Year == or.Year && r.Country != or.Country
                                   select r;
+            foreach (var r in filteredResults)
+            {
+                if ((r.Medals[0] > or.Medals[0])
+                    || (r.Medals[0] == or.Medals[0] && r.Medals[1] > or.Medals[1])
+                    || (r.Medals[0] == or.Medals[0] && r.Medals[1] == or.Medals[1] && r.Medals[2] > or.Medals[2]))
+                    betterCountryCount++;
+
+                //Alternatív megoldás
+
+                //if (r.Medals[0] > or.Medals[0])
+                //    betterCountryCount++;
+                //else if (r.Medals[0] == or.Medals[0])
+                //    if (r.Medals[1] > or.Medals[1])
+                //        betterCountryCount++;
+                //    else if (r.Medals[1] == or.Medals[1])
+                //        if (r.Medals[2] > or.Medals[2])
+                //            betterCountryCount++;
+            }
             return 0;
         }
     }
