@@ -70,6 +70,9 @@ namespace MintaZh1
         private int CalculatePosition(OlympicResult or)
         {
             var betterCountryCount = 0;
+            var filteredResults = from r in results
+                                  where r.Year == or.Year && r.Country != or.Country
+                                  select r;
             return 0;
         }
     }
