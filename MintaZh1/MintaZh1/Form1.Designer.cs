@@ -29,13 +29,32 @@ namespace MintaZh1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cboxYears = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // cboxYears
+            // 
+            this.cboxYears.FormattingEnabled = true;
+            this.cboxYears.Location = new System.Drawing.Point(13, 13);
+            this.cboxYears.Name = "cboxYears";
+            this.cboxYears.Size = new System.Drawing.Size(121, 21);
+            this.cboxYears.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cboxYears);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cboxYears;
     }
 }
 
