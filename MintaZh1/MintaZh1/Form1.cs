@@ -60,7 +60,10 @@ namespace MintaZh1
         }
 
         private void CreateYearFilter()
-        { 
+        {
+            var years = (from r in results
+                         orderby r.Year
+                         select r.Year).Distinct();
         }
     }
 }
