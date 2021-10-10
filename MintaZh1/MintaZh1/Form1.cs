@@ -146,6 +146,16 @@ namespace MintaZh1
                                   where r.Year == (int)cboxYears.SelectedItem
                                   orderby r.Position
                                   select r;
+
+            var counter = 2;
+            foreach (var r in filteredResults)
+            {
+                xlSheet.Cells[counter, 1] = r.Position;
+                xlSheet.Cells[counter, 2] = r.Country;
+                for (int i = 0; i <= 2; i++)
+                    xlSheet.Cells[counter, i + 3] = r.Medals[i];
+                counter++;
+            }
         }
     }
 }
