@@ -69,6 +69,7 @@ namespace MintaZh1
 
         private int CalculatePosition(OlympicResult or)
         {
+            var betterCountryCount = 0;
             return 0;
         }
     }
