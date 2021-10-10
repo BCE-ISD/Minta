@@ -21,6 +21,7 @@ namespace MintaZh1
             InitializeComponent();
             LoadData("Summer_olympic_Medals.csv");
             CreateYearFilter();
+            CalculateOrder();
         }
 
         private void LoadData(string fileName)
@@ -92,6 +93,12 @@ namespace MintaZh1
                 //            betterCountryCount++;
             }
             return betterCountryCount + 1;
+        }
+
+        private void CalculateOrder()
+        {
+            foreach (var r in results)
+                r.Position = CalculatePosition(r);
         }
     }
 }
